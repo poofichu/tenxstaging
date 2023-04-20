@@ -5,6 +5,11 @@ const post = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     image: z.string().optional(),
+    cardImage: z.string().optional(),
+    logo: z.string().optional(),
+    founderName: z.string().optional(),
+    companyName: z.string().optional(),
+    companyDescription: z.string().optional(),
 
     canonical: z.string().url().optional(),
 

@@ -1,11 +1,13 @@
 ---
 import Grid from '~/components/blog/Grid.astro';
+import { Icon } from 'astro-icon';
 
 import { getBlogPermalink } from '~/utils/permalinks';
 import { findLatestPosts } from '~/utils/blog';
 
 export interface Props {
   title?: string;
+  highlight?: string;
   allPostsText?: string;
   allPostsLink?: string | URL;
   information?: string;
@@ -14,40 +16,48 @@ export interface Props {
 
 const {
   title = await Astro.slots.render('title'),
-  allPostsText = 'View all posts',
+  highlight = await Astro.slots.render('title'),
+  allPostsText = 'See all Founders',
   allPostsLink = getBlogPermalink(),
   information = await Astro.slots.render('information'),
-  count = 4,
+  count = 3,
 } = Astro.props;
 
 const posts = await findLatestPosts({ count });
 ---
 
 <section class="px-4 py-16 mx-auto max-w-7xl lg:py-20">
-  <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
-    <div class="md:max-w-sm">
-      {
-        title && (
-          <h2
-            class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
-            set:html={title}
-          />
-        )
-      }
-      {
-        allPostsText && allPostsLink && (
-          <a
-            class="text-muted dark:text-slate-400 hover:text-primary transition ease-in duration-200 block mb-6 lg:mb-0"
-            href={allPostsLink}
-          >
-            {allPostsText} »
-          </a>
-        )
-      }
-    </div>
-
-    {information && <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md" set:html={information} />}
+  <div class="text-center mb-8">
+    {
+      highlight && (
+        <h3
+          class="text-primary font-bold tracking-tight text-xs sm:leading-none group font-heading mb-2"
+          set:html={highlight}
+        />
+      )
+    }
+    {
+      title && (
+        <h2
+          class="text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2"
+          set:html={title}
+        />
+      )
+    }
   </div>
 
   <Grid posts={posts} />
+  
+  <div class="portfolio--cta">
+    {
+      allPostsText && allPostsLink && (
+        <a
+          class="btn btn-primary mt-8"
+          href={allPostsLink}
+        >
+          {allPostsText} <Icon name="ic:outline-keyboard-arrow-right" />
+        </a>
+      )
+    }
+  </div>
 </section>

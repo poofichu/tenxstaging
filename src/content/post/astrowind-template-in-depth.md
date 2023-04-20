@@ -4,6 +4,11 @@ title: AstroWind template in depth
 description: Lorem ipsum dolor sit amet
 excerpt: Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas
 image: ~/assets/images/stickers.jpg
+cardImage: ~/assets/images/portfolio-card-apex.png
+logo: ~/assets/images/portfolio-logo-apex.png
+founderName: Edmund Chow
+companyName: Apex
+companyDescription: A classic becomes reality with the first “Back to the Future” hoverboards
 category: Tutorials
 tags:
   - astro

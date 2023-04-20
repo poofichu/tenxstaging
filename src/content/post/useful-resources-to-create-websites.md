@@ -3,6 +3,11 @@ publishDate: 2023-01-09T00:00:00Z
 title: Useful tools and resources to create a professional website
 excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur.
 image: ~/assets/images/tools.jpg
+cardImage: ~/assets/images/portfolio-card-heydays.png
+logo: ~/assets/images/portfolio-logo-heydays.png
+founderName: Wale Jegede
+companyName: HeyDays
+companyDescription: Superfan marketplace, supplying gameday treasures
 tags:
   - front-end
   - tools
