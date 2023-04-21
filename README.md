@@ -145,15 +145,16 @@ Basic configuration file: `./src/config.mjs`
 
 ```javascript
 const CONFIG = {
-  name: 'Example',
+  name: 'Ten X Labs',
 
   origin: 'https://example.com',
   basePathname: '/', // Change this if you need to deploy to Github Pages, for example
   trailingSlash: false, // Generate permalinks with or without "/" at the end
 
-  title: 'Example - This is the homepage title of Example', // Default seo title
-  description: 'This is the homepage description of Example', // Default seo description
+  title: 'Ten X Labs', // Default seo title
+  description: 'Ten X Labs is an Angel and pre-Seed fund that differentiates itself by creating deep, trusting bonds with first-time Founders before they’re even ready for investment.', // Default seo description
   defaultImage: 'image.jpg', // Default seo image
+  email: 'email@email.com', // Default contact email
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 

@@ -1,0 +1,58 @@
+.portfolio--header {
+    line-height: 1.75rem;
+  }
+  
+  .portfolio--cta .btn {
+    max-width: 275px;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+  
+    svg {
+      width: 25px;
+    }
+  }
+  
+  .portfolio--logo-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #000;
+    border: 2px solid var(--aw-color-secondary);
+    padding: 5px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio--card-container {
+    background-color: rgba(0,0,0,.8);
+    border-top: 2px solid var(--aw-color-secondary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .portfolio--card-content {
+    padding-right: 2rem;
+  }
+  
+  .portfolio--card-action {
+    position: relative;
+    padding-left: 1rem;
+    border-left: 1px solid #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .portfolio--card-icon {
+    width: 25px;
+    color: var(--aw-color-primary);
+    stroke: var(--aw-color-primary);
+  }

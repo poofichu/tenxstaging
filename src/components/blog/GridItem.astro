@@ -29,8 +29,8 @@ const companyDescription = await findImage(post.companyDescription);
             src={cardImage}
             class="md:object-cover"
             widths={[400, 900]}
-            width={400}
-            height={340}
+            width={768}
+            height={450}
             sizes="(max-width: 900px) 400px, 900px"
             alt={post.founderName}
             loading="lazy"
@@ -61,7 +61,7 @@ const companyDescription = await findImage(post.companyDescription);
   </div>
   <div class="portfolio--card-container">
     <div class="portfolio--card-content">
-        <h3 class="mb-2 text-xl font-bold leading-tight sm:text-2xl font-heading">
+        <h3 class="text-xl font-bold">
         {
           BLOG?.post?.disabled ? (
             post.founderName
@@ -75,7 +75,7 @@ const companyDescription = await findImage(post.companyDescription);
           )
         }
       </h3>
-      <p class="portfolio--card-description text-xs"><strong>{post.companyName}</strong> — {post.companyDescription}</p>
+      <p class="portfolio--card-description text-xs tracking-wide"><strong>{post.companyName}</strong> — {post.companyDescription}</p>
     </div>
     <div class="portfolio--card-action">
       <a href={getPermalink(post.permalink, 'post')}>

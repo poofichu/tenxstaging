@@ -1,0 +1,23 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import '~/assets/styles/tenXPlaybook.scss';
+
+const meta = {
+  title: "Ten X Playbook",
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero2>
+    <Fragment slot="title">
+        Repeatable, sustainable, success.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+        Ten X Labs assists first-time Founders of color by providing Angel and pre-Seed financing coupled with a unique operational approach that improves business results and speeds up access to larger capital markets.
+    </Fragment>
+  </Hero2>
+</Layout>

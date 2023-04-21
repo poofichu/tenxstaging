@@ -19,13 +19,38 @@
     @apply bg-black;
   }
 
+  p, h1, h2, h3, h4, h5, a {
+    letter-spacing: normal;
+  }
+
+  // Breakpoints guide
+
+  // theme('screens.sm') = 640
+  // theme('screens.md') = 768
+  // theme('screens.lg') = 1024
+  // theme('screens.xl') = 1280
   
   .btn {
     @apply inline-flex items-center justify-between shadow-md border-gray-400 border bg-transparent font-bold text-left text-xs text-page lg:text-lg leading-snug transition py-3.5 px-4 md:px-4 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600;
   }
 
   .btn {
-    box-shadow: .5rem .5rem #333;
+    box-shadow: .4rem .4rem #333;
+  }
+
+  .btn {
+    max-width: 300px;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: theme('screens.lg')) {
+      max-width: 400px;
+    }
+  
+    svg {
+      width: 25px;
+    }
   }
 
   .btn-ghost {
@@ -38,12 +63,24 @@
 }
 
 #header {
-  border-bottom: 1px solid rgba(137,63,253,1);
+  border-bottom: 2px solid var(--aw-color-secondary);
   background-color: #000;
 }
 
 #header.scroll {
   @apply shadow-md md:shadow-lg bg-black;
+}
+
+.header--togglemenu {
+  @media screen and (min-width: theme('screens.md')) {
+    display: none;
+  }
+}
+
+#header .navbar .active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -81,66 +118,104 @@
 }
 
 .max-w-8xl {
-  max-width: 82rem;
+  max-width: 84rem;
 }
 
-.portfolio--header {
-  line-height: 1.75rem;
-}
+.home-playbook {
+  background-color: #bdbdbd;
+  background-image: url(../images/home-portfolio-small.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #000;
+  min-height: 750px;
 
-.portfolio--cta .btn {
-  max-width: 200px;
-  display: flex;
-  justify-content: space-between;
-
-  svg {
-    width: 25px;
+  @media screen and (min-width: theme('screens.lg')) {
+    background-image: url(../images/home-portfolio-large.png);
+    background-size: 1344px;
+    background-color: #000;
   }
 }
 
-.portfolio--card {
-  max-width: 400px;
+.home-playbook--border {
+  border: 1rem solid rgba(0,0,0,.8);
+  min-height: 750px;
+
+  @media screen and (min-width: theme('screens.md')) {
+    border: 2rem solid rgba(0,0,0,.8);
+  }
+
+  @media screen and (min-width: theme('screens.lg')) {
+    min-height: 932px;
+  }
 }
 
-.portfolio--logo-container {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #000;
-  border: 2px solid rgba(137,63,253,1);
-  padding: 5px;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-playbook h3 {
+  color: #000;
+
+  @media screen and (min-width: theme('screens.lg')) {
+    color: var(--aw-color-primary);
+  }
 }
 
-.portfolio--card-container {
-  background-color: rgba(0,0,0,.8);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.home-playbook h2 {
+  width: 75%;
+
+  @media screen and (min-width: theme('screens.lg')) {
+    width: 100%;
+    color: #fff;
+  }
 }
 
-.portfolio--card-content {
-  padding-right: 2rem;
+.footer--cta {
+  border-top: 1px solid var(--aw-color-accent);
+  border-bottom: 2px solid var(--aw-color-secondary);
+
+  @media screen and (min-width: theme('screens.md')) {
+    border-bottom: 0; 
+  }
 }
 
-.portfolio--card-action {
-  position: relative;
-  padding-left: 1rem;
-  border-left: 1px solid #333;
-  display: flex;
-  align-items: center;
+.footer--cta .btn {
+  min-width: 220px;
+  width: 220px;
+
+  @media screen and (min-width: theme('screens.md')) {
+    width: auto;
+  }
+
+  @media screen and (min-width: theme('screens.lg')) {
+    width: 275px;
+  }
 }
 
-.portfolio--card-icon {
-  width: 25px;
-  color: var(--aw-color-primary);
-  stroke: var(--aw-color-primary);
+.footer--cta-text {
+  @media screen and (min-width: theme('screens.md')) {
+    border-right: 1px solid var(--aw-color-accent);
+  }
+}
+
+.footer--logo {
+  text-indent: -9999px;
+  display: block;
+  width: 53px;
+  height: 44px;
+  background-image: url(../images/10xlogo.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 53px 44px;
+}
+
+.footer--link-container {
+  display: none;
+
+  @media screen and (min-width: theme('screens.lg')) {
+    display: flex;
+  }
+}
+
+.navbarfooter .active {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
 }

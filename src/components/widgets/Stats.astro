@@ -1,7 +1,11 @@
 ---
+import '~/assets/styles/stats.scss';
+import { Icon } from 'astro-icon';
+
 interface Item {
   name: string;
   value: string;
+  what: string;
 }
 
 export interface Props {
@@ -19,37 +23,43 @@ const {
 } = Astro.props;
 ---
 
-<div class="px-4 py-4 md:py-16 sm:px-6 mx-auto md:px-24 lg:px-8 lg:py-20 max-w-6xl">
+<div class="stats--container relative px-4 pt-4 pb-0 md:py-10 mx-auto max-w-8xl md:px-8 lg:py-14 lg:px-10 xl:px-8 text-center">
   {
     (title || subtitle || highlight) && (
-      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <div class="max-w-xl lg:max-w-4xl mx-auto mb-10">
         {highlight && (
-          <p class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
+          <p class="text-primary font-bold tracking-normal text-xs sm:leading-none mb-2 md:text-base lg:text-xl">
             {highlight}
           </p>
         )}
         {title && (
           <h2
-            class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading"
+            class="text-2xl font-bold sm:text-4xl lg:text-5xl leading-7 group font-heading mb-4"
             set:html={title}
           />
         )}
         {subtitle && (
-          <p class="max-w-3xl mx-auto text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+          <p class="lg:text-2xl" set:html={subtitle} />
         )}
       </div>
     )
   }
-  <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
+  <div class="stats--stats">
     {
-      items.map(({ name, value }) => (
-        <div class="text-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0">
-          <div class="text-[2.6rem] font-bold lg:text-5xl xl:text-6xl text-primary dark:text-blue-600 font-heading">
-            {value}
+      items.map(({ name, value, what }) => (
+        <div class="stats--stats-container flex items-center text-left justify-center">
+          <div class="stats--icon">
+            <Icon name="ic:outline-keyboard-arrow-right" class="w-[25px] sm:w-[40px] xl:w-[50px] stroke-secondary fill-secondary text-secondary ml-[-5px]" />
           </div>
-          <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
+          <p class="stats--name text-left text-xs font-bold uppercase text-primary sm:text-base xl:text-xl tracking-normal">
             {name}
           </p>
+          <div class="stats--value font-bold text-[64px] sm:text-8xl xl:text-[170px] font-heading">
+            {value}
+          </div>
+          <div class="stats--what text-lg sm:text-2xl xl:text-5xl font-serif">
+            {what}
+          </div>
         </div>
       ))
     }

@@ -9,6 +9,6 @@ export interface Props {
 const { posts } = Astro.props;
 ---
 
-<div class="grid gap-4 row-gap-5 md:grid-cols-3 lg:grid-cols-3 -mb-4">
+<div class="grid gap-4 row-gap-5 md:grid-cols-2 lg:grid-cols-3 -mb-4 lg:mb-2">
   {posts.map((post) => <Item post={post} />)}
 </div>
