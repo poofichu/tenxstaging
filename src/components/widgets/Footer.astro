@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import { SITE } from '~/config.mjs';
-import navData from '~/data';
+import { headerData } from '~/data';
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -18,7 +18,6 @@ interface Links {
 
 export interface Props {
   links: Array<Links>;
-  secondaryLinks: Array<Link>;
 }
 
 const { links = [] } = Astro.props;
@@ -44,7 +43,28 @@ const { links = [] } = Astro.props;
         </div>
       </div>
       <div class="footer--link-container flex text-xs uppercase navbarfooter">
-        {navData.map((item) => <a href={item.href} class="ml-8 text-[#AAA] hover:text-[#FEA62B] font-semibold transition duration-150 ease-in-out">{item.name}</a>)}
+        {
+          links.map(({ title, links }) => (
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
+              <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
+              {links && Array.isArray(links) && links.length > 0 && (
+                <ul class="text-sm">
+                  {links.map(({ text, href, ariaLabel }) => (
+                    <li class="mb-2">
+                      <a
+                        class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                        href={href}
+                        aria-label={ariaLabel}
+                      >
+                        <Fragment set:html={text} />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
