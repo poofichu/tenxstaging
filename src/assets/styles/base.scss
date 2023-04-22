@@ -23,7 +23,7 @@
     letter-spacing: normal;
   }
 
-  a, a:link {
+  a, a:link, a:visited {
     color: var(--aw-color-primary);
     text-decoration: underline;
   }
@@ -114,8 +114,14 @@
   border-bottom: 2px solid var(--aw-color-secondary);
   background-color: #000;
 
-  a, a:link {
+  a, a:link, a:visited {
     text-decoration: none;
+    color: #AAA;
+  }
+
+  a:hover {
+    color: var(--aw-color-primary);
+    text-decoration: underline;
   }
 }
 
