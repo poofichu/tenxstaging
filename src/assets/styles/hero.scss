@@ -54,6 +54,7 @@
 	.hero2 .hero--content {
 		margin-top: 260px;
 		min-height: auto;
+    padding-bottom: 1rem;
 
 		@media screen and (min-width: theme('screens.sm')) {
       margin-top: 400px;

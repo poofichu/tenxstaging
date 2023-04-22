@@ -28,14 +28,12 @@ const {
     (title || subtitle || highlight) && (
       <div class="max-w-xl lg:max-w-4xl mx-auto mb-10">
         {highlight && (
-          <p class="text-primary font-bold tracking-normal text-xs sm:leading-none mb-2 md:text-base lg:text-xl">
+          <h3>
             {highlight}
-          </p>
+          </h3>
         )}
         {title && (
-          <h2
-            class="text-2xl font-bold sm:text-4xl lg:text-5xl leading-7 group font-heading mb-4"
-            set:html={title}
+          <h2 set:html={title}
           />
         )}
         {subtitle && (

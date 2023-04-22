@@ -19,12 +19,58 @@
     @apply bg-black;
   }
 
-  p, h1, h2, h3, h4, h5, a {
+  p, h1, h2, h3, h4, h5, a, li {
     letter-spacing: normal;
   }
 
-  // Breakpoints guide
+  a, a:link {
+    color: var(--aw-color-primary);
+    text-decoration: underline;
+  }
 
+  a:hover {
+    color: #fff;
+    transition: all .2s ease-in-out;
+  }
+
+  // white, thick, title
+  h2 {
+    font-size: var(--aw-text-2xl);
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: theme('screens.sm')) {
+      font-size: var(--aw-text-4xl);
+      line-height: 2.5rem;
+    }
+
+    @media screen and (min-width: theme('screens.lg')) {
+      font-size: var(--aw-text-5xl);
+      line-height: 1;
+    }
+  }
+
+  // yellow, uppercase, highlight
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--aw-text-xs);
+    color: var(--aw-color-primary);
+    //margin-bottom: .5rem;
+
+    @media screen and (min-width: theme('screens.md')) {
+      font-size: var(--aw-text-sm);
+      line-height: 1.5rem;
+    }
+
+    @media screen and (min-width: theme('screens.lg')) {
+      font-size: var(--aw-text-xl);
+      line-height: 1.75rem;
+    }
+  }
+
+  // Breakpoints guide
   // theme('screens.sm') = 640
   // theme('screens.md') = 768
   // theme('screens.lg') = 1024
@@ -34,8 +80,10 @@
     @apply inline-flex items-center justify-between shadow-md border-gray-400 border bg-transparent font-bold text-left text-xs text-page lg:text-lg leading-snug transition py-3.5 px-4 md:px-4 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600;
   }
 
-  .btn {
+  a.btn {
     box-shadow: .4rem .4rem #333;
+    text-decoration: none;
+    color: #000;
   }
 
   .btn {
@@ -65,6 +113,10 @@
 #header {
   border-bottom: 2px solid var(--aw-color-secondary);
   background-color: #000;
+
+  a, a:link {
+    text-decoration: none;
+  }
 }
 
 #header.scroll {
@@ -135,35 +187,91 @@
     background-size: 1344px;
     background-color: #000;
   }
-}
 
-.home-playbook--border {
-  border: 1rem solid rgba(0,0,0,.8);
-  min-height: 750px;
-
-  @media screen and (min-width: theme('screens.md')) {
-    border: 2rem solid rgba(0,0,0,.8);
+  h3 {
+    color: #000;
+  
+    @media screen and (min-width: theme('screens.lg')) {
+      color: var(--aw-color-primary);
+    }
   }
 
-  @media screen and (min-width: theme('screens.lg')) {
-    min-height: 932px;
+  h2 {
+    width: 75%;
+  
+    @media screen and (min-width: theme('screens.lg')) {
+      width: 100%;
+      color: #fff;
+    }
   }
-}
 
-.home-playbook h3 {
-  color: #000;
-
-  @media screen and (min-width: theme('screens.lg')) {
-    color: var(--aw-color-primary);
+  .home-playbook--border {
+    border: 1rem solid rgba(0,0,0,.8);
+    min-height: 750px;
+  
+    @media screen and (min-width: theme('screens.md')) {
+      border: 2rem solid rgba(0,0,0,.8);
+    }
+  
+    @media screen and (min-width: theme('screens.lg')) {
+      min-height: 932px;
+    }
   }
-}
 
-.home-playbook h2 {
-  width: 75%;
-
-  @media screen and (min-width: theme('screens.lg')) {
-    width: 100%;
+  &.playbook-page {
     color: #fff;
+    background-image: url(../images/founder-mantra-small.png);
+    background-position: center center;
+    min-height: 450px;
+
+    h3 {
+      color: var(--aw-color-primary);
+      margin-bottom: .5rem;
+
+      @media screen and (min-width: theme('screens.lg')) {
+        font-size: var(--aw-text-lg);
+        line-height: 1.75rem;
+      }
+    }
+
+    h2 {
+      width: 55%;
+
+      @media screen and (min-width: theme('screens.lg')) {
+        width: 100%;
+        font-size: var(--aw-text-4xl);
+        line-height: 2.5rem;
+      }
+    }
+
+    .home-playbook--border {
+      min-height: 450px;
+
+      @media screen and (min-width: theme('screens.sm')) {
+        min-height: 600px;
+      }
+
+      @media screen and (min-width: theme('screens.md')) {
+        min-height: 750px;
+      }
+
+      @media screen and (min-width: theme('screens.lg')) {
+        min-height: 900px;
+      }
+    }
+
+    @media screen and (min-width: theme('screens.sm')) {
+      min-height: 600px;
+    }
+
+    @media screen and (min-width: theme('screens.md')) {
+      min-height: 750px;
+    }
+    
+    @media screen and (min-width: theme('screens.lg')) {
+      background-image: url(../images/founder-mantra-large.png);
+      min-height: 900px;
+    }
   }
 }
 
@@ -218,4 +326,92 @@
   font-weight: bold;
   color: #fff;
   text-decoration: underline;
+}
+
+
+// STYLES FOR SECOND LEVEL CONTENT PAGES
+
+.second-level {
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.75rem;
+
+    @media screen and (min-width: theme('screens.sm')) {
+      max-width: 75%;
+    }
+
+    @media screen and (min-width: theme('screens.lg')) {
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: theme('screens.xl')) {
+      font-size: 1.65rem;
+      line-height: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &--border {
+    border-top: 1px solid var(--aw-color-accent);
+  }
+
+  ul {
+    font-family: var(--aw-font-serif);
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: theme('screens.lg')) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  ul li {
+    border-top: 1px solid var(--aw-color-accent);
+    padding: 1rem 1rem 1rem 0;
+    padding-left: 1rem;
+    background-image: url(../images/arrow-right.png);
+    background-position: 0 22px;
+    background-repeat: no-repeat;
+    background-size: 8px 12px;
+
+    @media screen and (min-width: theme('screens.lg')) {
+      background-image: url(../images/arrow-down-large.png);
+      background-size: 24px 15px;
+      padding-left: 0;
+      padding-top: 3rem;
+    }
+
+    @media screen and (min-width: theme('screens.xl')) {
+      font-size: var(--aw-text-2xl);
+      line-height: 2rem;
+    }
+  }
+
+  ul li::marker {
+    min-width: 24px;
+  }
+
+  &--content {
+    h3 {
+      @media screen and (min-width: theme('screens.lg')) {
+        padding-bottom: .5rem;
+      }
+    }
+    
+    h2 {
+      font-size: var(--aw-text-xl);
+      margin-bottom: 2rem;
+
+      @media screen and (min-width: theme('screens.sm')) {
+        font-size: var(--aw-text-2xl);
+      }
+
+      @media screen and (min-width: theme('screens.md')) {
+        font-size: var(--aw-text-3xl);
+      }
+
+      @media screen and (min-width: theme('screens.lg')) {
+        font-size: var(--aw-text-4xl);
+      }
+    }
+  }
 }
