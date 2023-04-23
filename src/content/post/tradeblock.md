@@ -17,13 +17,10 @@ tags:
   - tailwind css
 canonical: https://astrowind.vercel.app/get-started-website-with-astro-tailwind-css
 ---
-import { Image, Picture } from '@astrojs/image/components';
 
 The founders of Tradeblock were all sneakerheads with a common interest and a history together. Darren, Mbiyimoh and Tony felt that the online sneaker community never reflected the passions and trading that were the core of the sneaker culture.   
 
 There was a very large cash market (e.g. StockX and GOAT) but online swapping, which normally occurred at conventions, had been trivial in relative size.  The community needed a peer-to-peer network - built and run by sneakerheads but brought forward to the digital age. Still, the end state of product market fit was unknown.  
-
-<Image src={import('../../assets/images/tradeblock1.png')} alt="Astro" />
 
 Today, Tradeblock is the world’s largest pure-play sneaker trading platform. How did Ten X Labs fit in?
 

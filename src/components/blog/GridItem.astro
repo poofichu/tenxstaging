@@ -15,6 +15,9 @@ export interface Props {
 const { post } = Astro.props;
 const cardImage = await findImage(post.cardImage);
 const logo = await findImage(post.logo);
+const founderName = await findImage(post.founderName);
+const companyName = await findImage(post.companyName);
+const companyDescription = await findImage(post.companyDescription);
 ---
 
 <article class="portfolio--card mb-2 relative transition">
