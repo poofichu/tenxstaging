@@ -238,6 +238,11 @@
         font-size: var(--aw-text-lg);
         line-height: 1.75rem;
       }
+
+      @media screen and (min-width: theme('screens.xl')) {
+        font-size: var(--aw-text-xl);
+        line-height: 1.75rem;
+      }
     }
 
     h2 {
@@ -247,6 +252,12 @@
         width: 100%;
         font-size: var(--aw-text-4xl);
         line-height: 2.5rem;
+      }
+
+      @media screen and (min-width: theme('screens.xl')) {
+        width: 100%;
+        font-size: var(--aw-text-5xl);
+        line-height: 1.1;
       }
     }
 

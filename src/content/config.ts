@@ -4,7 +4,9 @@ const post = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    image: z.string().optional(),
+    imageSmall: z.string().optional(),
+    imageLarge: z.string().optional(),
+    class: z.string().optional(),
     cardImage: z.string().optional(),
     logo: z.string().optional(),
     founderName: z.string().optional(),

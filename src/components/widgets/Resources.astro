@@ -1,0 +1,23 @@
+---
+interface Item {
+  name: string;
+  value: string;
+  what: string;
+}
+
+export interface Props {
+    items?: Array<Item>;
+}
+
+const {
+  items = [],
+} = Astro.props;
+---
+
+<ul class="resources-list">
+    {
+      items.map(({ name, value }) => (
+        <li>{name} / {value}</li>
+      ))
+    }
+</ul>

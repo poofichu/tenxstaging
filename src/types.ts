@@ -6,7 +6,14 @@ export interface Post {
   title: string;
   description?: string;
 
-  image?: string;
+  imageSmall?: string;
+  imageLarge?: string;
+  cardImage?:string;
+  logo?:string;
+  founderName?:string;
+  companyName?:string;
+  companyDescription?:string;
+  class?:string;
 
   canonical?: string | URL;
   permalink?: string;

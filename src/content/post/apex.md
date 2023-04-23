@@ -1,13 +1,13 @@
 ---
-publishDate: 2023-01-09T00:00:00Z
+publishDate: 2023-01-08
 title: Useful tools and resources to create a professional website
 excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur.
 image: ~/assets/images/tools.jpg
-cardImage: ~/assets/images/portfolio-card-heydays.png
-logo: ~/assets/images/portfolio-logo-heydays.png
-founderName: Wale Jegede
-companyName: HeyDays
-companyDescription: Superfan marketplace, supplying gameday treasures
+cardImage: ~/assets/images/portfolio-card-apex.png
+logo: ~/assets/images/portfolio-logo-apex.png
+founderName: Edmund Chow
+companyName: Apex
+companyDescription: A classic becomes reality with the first “Back to the Future” hoverboards
 tags:
   - front-end
   - tools
