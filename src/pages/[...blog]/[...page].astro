@@ -1,12 +1,11 @@
 ---
 import { SITE, BLOG } from '~/config.mjs';
+import '~/assets/styles/portfolio.scss';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/grid.astro';
+import BlogList from '~/components/blog/Grid.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-
-import '~/assets/styles/portfolio.scss';
 
 import { fetchPosts } from '~/utils/blog';
 import { BLOG_BASE } from '~/utils/permalinks';
