@@ -117,11 +117,27 @@
   a, a:link, a:visited {
     text-decoration: none;
     color: #AAA;
+    font-size: .875rem;
+    font-weight: bold;
+  }
+
+  button {
+    font-size: .875rem;
   }
 
   a:hover {
     color: var(--aw-color-primary);
     text-decoration: underline;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu a:link,
+  .dropdown-menu a:visited {
+    color: #FFF;
+  }
+
+  .dropdown-menu a:hover, {
+    color: var(--aw-color-primary);
   }
 }
 
