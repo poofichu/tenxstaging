@@ -1,11 +1,11 @@
 ---
 import { SITE, BLOG } from '~/config.mjs';
-import '~/assets/styles/portfolio.scss';
 
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/Grid.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import '~/assets/styles/portfolio.scss';
 
 import { fetchPosts } from '~/utils/blog';
 import { BLOG_BASE } from '~/utils/permalinks';
@@ -33,6 +33,7 @@ const meta = {
   <Hero2
     subtitle="Ten X Labs is an Angel and pre-Seed fund that differentiates itself by creating deep, trusting bonds with first-time Founders before they’re even ready for investment. We combine this trust with expertise and capital to help speed up business maturity, building minority-led, Seed-ready companies for a fraction of the cost."
     title="The 10X foundation is its Founders"
+    bannerClass="hero-playbook"
   />
   
   <section class="px-4 py-10 mx-auto max-w-8xl lg:py-20">
