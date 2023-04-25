@@ -346,8 +346,19 @@
 .footer--link-container {
   display: none;
 
-  @media screen and (min-width: theme('screens.lg')) {
+  @media screen and (min-width: theme('screens.md')) {
     display: flex;
+  }
+
+  a, a:link, a:visited {
+    color: #AAA;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
