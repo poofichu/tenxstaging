@@ -60,8 +60,8 @@
 		font-size: var(--aw-text-4xl);
 		line-height: 1;
 
-		@media screen and (min-width: theme('screens.lg')) {
-			font-size: var(--aw-text-5xl);
+		@media screen and (min-width: theme('screens.md')) {
+			font-size: var(--aw-text-6xl);
 		}
 
 		@media screen and (min-width: theme('screens.xl')) {
@@ -113,19 +113,39 @@
 			}
 		}
 
-		cite {
+		.blockquote-cite {
 			font-family: var(--aw-font-serif);
 			font-size: var(--aw-text-xs);
-			display: block;
+			display: flex;
+			flex-direction: row;
 			width: 100%;
-			margin: .75rem 0 2rem;
-			position: relative;
+			margin: .75rem auto 2rem;
+			//position: relative;
 			text-align: center;
 			line-height: 1rem;
 
-			@media screen and (min-width: theme('screens.xl')) {
-				margin: 1.25rem 0 3rem;
+			@media screen and (min-width: theme('screens.lg')) {
+				margin: 1.25rem auto 3rem;
 				line-height: 1.25rem;
+				width: 75%;
+			}
+
+			span {
+				width: 75%;
+				display: block;
+				padding: 0 1rem;
+
+				@media screen and (min-width: theme('screens.sm')) {
+					width: auto;
+				}
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				flex: 1 1;
+				border-bottom: 1px solid var(--aw-color-secondary);
+				margin: auto;
 			}
 		}
 
@@ -134,12 +154,19 @@
 			@media screen and (min-width: theme('screens.md')) {
 				float: left;
 				width: 50%;
-				margin: 0 2rem 1.5rem 0;
+				margin: 0 2rem 1rem 0;
 			}
 
 			cite {
-				text-align: left;
+				font-family: var(--aw-font-serif);
+				font-size: var(--aw-text-xs);
+				display: block;
+				width: 100%;
+				margin-bottom: 2rem;
 				margin-top: 1rem;
+				position: relative;
+				line-height: 1rem;
+				text-align: left;
 
 				@media screen and (min-width: theme('screens.md')) {
 					margin-bottom: 0;

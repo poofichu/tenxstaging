@@ -111,7 +111,7 @@
 }
 
 #header {
-  border-bottom: 2px solid var(--aw-color-secondary);
+  border-bottom: 1px solid var(--aw-color-secondary);
   background-color: #000;
 
   a, a:link, a:visited {
@@ -310,11 +310,7 @@
 
 .footer--cta {
   border-top: 1px solid var(--aw-color-accent);
-  border-bottom: 2px solid var(--aw-color-secondary);
-
-  @media screen and (min-width: theme('screens.md')) {
-    border-bottom: 0; 
-  }
+  border-bottom: 1px solid var(--aw-color-secondary);
 }
 
 .footer--cta .btn {

@@ -33,23 +33,25 @@
 	width: 70px;
 
 	@media screen and (min-width: theme('screens.sm')) {
-		width: 105px;
+		width: 95px;
 	}
 
 	@media screen and (min-width: theme('screens.xl')) {
-		width: 130px;
+		width: 115px;
 	}
 }
 
 .stats--value {
-	width: 90px;
+	width: 85px;
+	text-align: left;
+	font-family: 'Courier Prime', Courier, monospace;
 
 	@media screen and (min-width: theme('screens.sm')) {
-		width: 150px;
+		width: 125px;
 	}
 
 	@media screen and (min-width: theme('screens.xl')) {
-		width: 250px;
+		width: 220px;
 	}
 }
 

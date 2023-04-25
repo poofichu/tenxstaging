@@ -8,24 +8,7 @@ export const headerData = {
     },
     {
       text: 'Founders Stories',
-      links: [
-        {
-          text: 'All stories',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Tradeblock',
-          href: getPermalink('/tradeblock'),
-        },
-        {
-          text: 'Hey Days',
-          href: getPermalink('/heydays'),
-        },
-        {
-          text: 'Apex',
-          href: getPermalink('/apex'),
-        },
-      ],
+      href: getPermalink('/founders-stories'),
     },
     {
       text: 'Ten X Playbook',
