@@ -24,7 +24,7 @@
 		width: 45px;
 	}
 
-	@media screen and (min-width: theme('screens.xl')) {
+	@media screen and (min-width: theme('screens.lg')) {
 		width: 55px;
 	}
 }
@@ -36,22 +36,24 @@
 		width: 95px;
 	}
 
-	@media screen and (min-width: theme('screens.xl')) {
+	@media screen and (min-width: theme('screens.lg')) {
 		width: 115px;
 	}
 }
 
 .stats--value {
 	width: 85px;
-	text-align: left;
-	font-family: 'Courier Prime', Courier, monospace;
+	text-align: right;
+	margin-right: .75rem;
+	//font-family: 'Courier Prime', Courier, monospace;
 
 	@media screen and (min-width: theme('screens.sm')) {
 		width: 125px;
 	}
 
-	@media screen and (min-width: theme('screens.xl')) {
+	@media screen and (min-width: theme('screens.lg')) {
 		width: 220px;
+		margin-right: 1rem;
 	}
 }
 
@@ -62,7 +64,7 @@
 		width: 200px;
 	}
 
-	@media screen and (min-width: theme('screens.xl')) {
-		width: 620px;
+	@media screen and (min-width: theme('screens.lg')) {
+		width: 710px;
 	}
 }

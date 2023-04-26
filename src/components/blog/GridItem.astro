@@ -18,10 +18,10 @@ const logo = await findImage(post.logo);
 ---
 
 <article class="portfolio--card mb-2 relative transition">
-  <div class="portfolio--image relative">
-    {
-      cardImage && (
-        <a href={getPermalink(post.permalink, 'post')}>
+  <a href={getPermalink(post.permalink, 'post')} class="main-link" title=`Learn more about ${post.companyName}`>
+    <div class="portfolio--image relative">
+      {
+        cardImage && (
           <Picture
             src={cardImage}
             class="md:object-cover"
@@ -33,51 +33,34 @@ const logo = await findImage(post.logo);
             loading="lazy"
             decoding="async"
           />
-        </a>
-      )
-    }
-    <div class="portfolio--logo-container rounded-full">
-      <a href={getPermalink(post.permalink, 'post')}>
-      {
-        logo && (
-          <Picture
-              src={logo}
-              class="portfolio--logo"
-              widths={[33, 33]}
-              width={33}
-              height={33}
-              sizes="(max-width: 900px) 400px, 900px"
-              alt={post.companyName}
-              loading="lazy"
-              decoding="async"
-          />
         )
       }
-      </a>
-    </div>
-  </div>
-  <div class="portfolio--card-container">
-    <div class="portfolio--card-content">
-        <h3>
+      <div class="portfolio--logo-container rounded-full">
         {
-          BLOG?.post?.disabled ? (
-            post.founderName
-          ) : (
-            <a
-              href={getPermalink(post.permalink, 'post')}
-              class="hover:text-primary transition ease-in duration-200"
-            >
-              {post.founderName}
-            </a>
+          logo && (
+            <Picture
+                src={logo}
+                class="portfolio--logo"
+                widths={[33, 33]}
+                width={33}
+                height={33}
+                sizes="(max-width: 900px) 400px, 900px"
+                alt={post.companyName}
+                loading="lazy"
+                decoding="async"
+            />
           )
         }
-      </h3>
-      <p class="portfolio--card-description text-xs tracking-wide"><strong>{post.companyName}</strong> — {post.companyDescription}</p>
+      </div>
     </div>
-    <div class="portfolio--card-action">
-      <a href={getPermalink(post.permalink, 'post')}>
+    <div class="portfolio--card-container">
+      <div class="portfolio--card-content">
+          <div class="portfolio--card-founder">{post.founderName}</div>
+          <div class="portfolio--card-description text-xs"><strong>{post.companyName}</strong> — {post.companyDescription}</div>
+      </div>
+      <div class="portfolio--card-action">
         <Icon name="ic:outline-keyboard-arrow-right" class="portfolio--card-icon" />
-      </a>
+      </div>
     </div>
-  </div>
+  </a>
 </article>

@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.portfolio--card {
+  overflow: hidden;
+}
+
 .portfolio--card-container {
   background-color: rgba(0,0,0,.8);
   border-top: 2px solid var(--aw-color-secondary);
@@ -50,22 +54,29 @@
 .portfolio--card-content {
   padding-right: 2rem;
 
-  h3 {
+  .portfolio--card-founder {
     color: var(--aw-text-primary);
     text-transform: none;
     font-size: var(--aw-text-xl);
     line-height: 1.25rem;
     margin-bottom: .25rem;
+    font-weight: bold;
+    color: #fff;
   }
 
-  a, a:link, a:visited {
+  a, a:link, a:visited,
+  .portfolio--card-description {
     color: #fff;
     text-decoration: none;
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
+}
+
+.portfolio--image {
+  overflow: hidden;
 }
 
 .portfolio--card-action {
@@ -80,4 +91,15 @@
   width: 25px;
   color: var(--aw-color-primary);
   stroke: var(--aw-color-primary);
+}
+
+.main-link {
+  .portfolio--image:hover {
+    transform:scale(1.05,1.05);
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    transition-property: transform;
+    transition-duration: 350ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
