@@ -9,6 +9,7 @@ import { findLatestPosts } from '~/utils/blog';
 export interface Props {
   title?: string;
   highlight?: string;
+  description?: string;
   allPostsText?: string;
   allPostsLink?: string | URL;
   information?: string;
@@ -18,7 +19,8 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   highlight = await Astro.slots.render('title'),
-  allPostsText = 'See all Founders',
+  description = await Astro.slots.render('description'),
+  allPostsText = 'Meet a few 10X Founders',
   allPostsLink = getBlogPermalink(),
   information = await Astro.slots.render('information'),
   count = 3,
@@ -28,7 +30,7 @@ const posts = await findLatestPosts({ count });
 ---
 
 <section class="px-4 py-10 mx-auto max-w-8xl lg:py-20">
-  <div class="text-center mb-4 lg:mb-8">
+  <div class="text-center mb-10 lg:mb-8 max-w-xl lg:max-w-4xl mx-auto">
     {
       highlight && (
         <h3
@@ -39,8 +41,16 @@ const posts = await findLatestPosts({ count });
     {
       title && (
         <h2
-          class="md:mb-8"
+          class="md:mb-4"
           set:html={title}
+        />
+      )
+    }
+    {
+      description && (
+        <p
+          class="md:mb-8 lg:text-2xl"
+          set:html={description}
         />
       )
     }
