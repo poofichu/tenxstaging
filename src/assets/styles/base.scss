@@ -402,8 +402,8 @@
     border-top: 1px solid var(--aw-color-accent);
   }
 
-  ul {
-    font-family: var(--aw-font-serif);
+  ul.classic-list {
+    //font-family: var(--aw-font-serif);
     margin-bottom: 1rem;
 
     @media screen and (min-width: theme('screens.lg')) {
@@ -411,9 +411,9 @@
     }
   }
 
-  ul li {
-    //border-top: 1px solid var(--aw-color-accent);
-    //padding: 1rem 1rem 1rem 0;
+  ul.classic-list li {
+    border-top: 1px solid var(--aw-color-accent);
+    padding: 1rem 1rem 1rem 0;
     //padding-left: 1rem;
     //background-image: url(../images/arrow-right.png);
     //background-position: 0 22px;
@@ -430,6 +430,7 @@
     @media screen and (min-width: theme('screens.xl')) {
       font-size: var(--aw-text-2xl);
       line-height: 2rem;
+      padding: 1.5rem 0 1.5rem 0;
     }
   }
 
