@@ -77,7 +77,11 @@
   // theme('screens.xl') = 1280
   
   .btn {
-    @apply inline-flex items-center justify-between shadow-md border-gray-400 border bg-transparent font-bold text-left text-xs text-page lg:text-lg transition py-3.5 px-4 md:px-4 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600;
+    @apply inline-flex items-center justify-between shadow-md bg-transparent font-bold text-left text-xs text-page lg:text-lg transition py-3.5 px-4 md:px-4 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100;
+  }
+
+  .btn:hover {
+    border: 0 none;
   }
 
   a.btn {
@@ -402,18 +406,18 @@
     border-top: 1px solid var(--aw-color-accent);
   }
 
-  ul.classic-list {
-    //font-family: var(--aw-font-serif);
+  ul.list {
+    margin-left: 1.25rem;
     margin-bottom: 1rem;
 
     @media screen and (min-width: theme('screens.lg')) {
-      margin-bottom: 2.5rem;
+      margin-left: 1.5rem;
     }
   }
 
-  ul.classic-list li {
-    border-top: 1px solid var(--aw-color-accent);
-    padding: 1rem 1rem 1rem 0;
+  ul.list li {
+    //border-top: 1px solid var(--aw-color-accent);
+    padding: 0 1rem 1rem 0;
     //padding-left: 1rem;
     //background-image: url(../images/arrow-right.png);
     //background-position: 0 22px;
@@ -430,12 +434,13 @@
     @media screen and (min-width: theme('screens.xl')) {
       font-size: var(--aw-text-2xl);
       line-height: 2rem;
-      padding: 1.5rem 0 1.5rem 0;
+      padding: 0 0 2rem 0;
     }
   }
 
   ul li::marker {
     min-width: 24px;
+    color: #444;
   }
 
   &--content {
