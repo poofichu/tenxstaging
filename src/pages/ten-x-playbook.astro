@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import { Accordion, AccordionItem } from 'accessible-astro-components'
+import { Icon } from 'astro-icon';
 import '~/assets/styles/tenXPlaybook.scss';
 
 const meta = {
@@ -32,31 +33,34 @@ const meta = {
       <div class="second-level--content-section second-level--border pt-4 lg:pt-8 lg:pb-4 lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="second-level--content-left lg:col-span-4">
           <h3>6 Weeks</h3>
-          <h2>Evaluate the Founder</h2>
+          <h2>Build trust</h2>
         </div>
         <div class="second-level--content-right lg:col-span-8">
-          <p>Ten X Labs conducts a no-cost, one-on-one, six week “Founders Program”  where we explore three critical startup areas with the Founders. This one-on-one approach enables Ten X Labs Partners to observe Founders at work. All of this occurs before Ten X Labs offers our Term Sheet to any Founder.:</p>
+          <p>Ten X Labs conducts a no-cost, one-on-one, six week “Founders Program”  where we explore three critical startup areas with the Founders. This one-on-one approach enables Ten X Labs Partners to observe Founders at work, and gives the Founders an opportunity to build a relationship with 10X prior to any future moves. In the Founders Program, we cover:</p>
           <Accordion>
             <AccordionItem
               header="Product/Market fit"
             >
-              <p>Founders are required to research their markets and are exposed to the pitfalls of being an engineering-driven company versus one that builds in a customer-driven feedback loop from the start. Target personas are developed, and methods for reaching them at scale are explored.</p>
+              <p>Founders are required to research their markets and competitors, and are exposed to human-centered design practices, which highlight the pitfalls of engineering-driven companies. Target personas are developed, and methods for reaching them at scale are explored. Product differentiation, as well as defensibility of IP, is evaluated and in the cases where access to technical experts is helpful, we connect Founders to individuals in our network, from engineering to law.</p>
             </AccordionItem>
             <AccordionItem
               header="Operations and Team"
             >
-              <p>We explore exactly which KPIs the company should focus on, now, and what type of management, consultant and teaming structure is needed. Alternate business models are explored.
+              <p>We explore exactly which KPIs the company should focus on, right now, and what type of management, consultant and teaming structure is needed. Alternate business models are explored. The focus here is to give the Founders confidence that what they are working on matters for their company’s next step in maturity. Many Founders tend to focus on problems that aren’t required to be solved at the moment, while at the same time, ignoring the things that get them to that next level.
               </p>
             </AccordionItem>
             <AccordionItem
               header="Financial Acumen"
             >
-              <p>We work with the Founders to establish a budget and how to focus spending on the things that matter for this stage of their business. The focus is on the next 12 months, and the money likely to be raised, and at what cost.</p>
+              <p>We work with the Founders to establish a budget and how to focus spending on the things that matter for this stage of their business. The focus is on the next 6-12 months, the money likely to be needed during that time, and at what cost.</p>
             </AccordionItem>
           
             <!-- ... -->
           
           </Accordion>
+          <a class="btn btn-primary mt-8 mb-8" href="https://bit.ly/10XFoundersApplication" target="_blank">
+            Apply to become a 10X Founder <Icon name="ic:outline-keyboard-arrow-right" />
+          </a>
         </div>
       </div>
 
@@ -64,10 +68,10 @@ const meta = {
       <div class="second-level--content-section second-level--border pt-4 lg:pt-8 lg:pb-4 lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="second-level--content-left lg:col-span-4">
           <h3>3-6 Months</h3>
-          <h2>Validate the Market</h2>
+          <h2>Validate potential</h2>
         </div>
         <div class="second-level--content-right lg:col-span-8">
-          <p>At the culmination of the Founders Program, it’s possible that Ten X Labs will make an initial (Angel) investment in the company. If this occurs a Ten X Labs Operating Partner will be assigned to the company and will work with the Founder to establish specific KPIs where these investment dollars will be spent to achieve results. The KPIs are established prior to the Angel investment. They may reflect some objective result (e.g. number of paying users) or, more likely at this stage, a sequence of user behaviors that cumulatively provide evidence of product market fit. We are not looking for scalable revenues at this point, but rather validation that the problem exists and that this solution is a viable one. Ideally, we want to exit this period with the following:</p>
+          <p>At the culmination of the Founders Program, it’s possible that Ten X Labs will want to make an initial (Angel) investment in the company. If this occurs, a Ten X Labs Operating Partner will be assigned to the company and will work with the Founders to develop a Term Sheet. While typical in most respects, a Ten X Term Sheet requires that we jointly establish specific KPIs, so that we have alignment on where these investment dollars will be spent, and the results needed to get to the next round. We usually aren’t looking for scalable revenues during this phase, but rather validation that the problem exists and that this solution is a viable one. Ideally, we want to exit this period with the following:</p>
           <Accordion>
             <AccordionItem
               header="A user-validated prototype or v1 offering"
@@ -96,7 +100,7 @@ const meta = {
       <div class="second-level--content-section second-level--border pt-4 lg:pt-8 lg:pb-4 lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="second-level--content-left lg:col-span-4">
           <h3>9-12 Months</h3>
-          <h2>Establish the Business</h2>
+          <h2>Establish business</h2>
         </div>
         <div class="second-level--content-right lg:col-span-8">
           <p>If the company hits their previous KPIs, the intention is for Ten X Labs to make a follow-on Pre-Seed investment and to move the assigned Operating Partner to a Board seat. While the product spend will continue to grow during this phase, we also begin working with the Founders to build their business (as opposed to the almost maniacal focus on product during the Angel phase). To prepare the business for an outside-led Seed round, the Pre-Seed phase is focused on:</p>
